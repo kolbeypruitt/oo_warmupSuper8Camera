@@ -29,25 +29,26 @@ describe('camera', function(){
   });
 
   it('starts with 0 totalFrames', function () {
+    var camera = new Camera();
     expect(camera.totalFrames).toEqual(0);
   });
 
-  xit('fps should default to normal', function () {
+  it('fps should default to normal', function () {
     expect(camera.fps).toEqual(18);
   });
 
-  xit('should have normal shooting mode speed (18 fps)', function () {
+  it('should have normal shooting mode speed (18 fps)', function () {
     camera.shoot('normal');
     expect(camera.fps).toEqual(18);
   });
 
-  xit('should have slow shooting mode speed (36 fps)', function () {
+  it('should have slow shooting mode speed (36 fps)', function () {
     // expect(camera.fps).toEqual(18);
     camera.shoot('slow');
     expect(camera.fps).toEqual(36);
   });
 
-  xit('should have fast shooting mode speed (9 fps)', function () {
+  it('should have fast shooting mode speed (9 fps)', function () {
     // expect(camera.fps).toEqual(18);
     camera.shoot('fast');
     expect(camera.fps).toEqual(9);
